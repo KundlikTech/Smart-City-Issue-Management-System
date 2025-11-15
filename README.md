@@ -74,7 +74,7 @@ The project is built upon a modern and reliable stack, ensuring performance, sec
 ### 🔹 Backend Setup (Spring Boot)
 1.  Navigate to the `backend` directory:
     ```bash
-    cd backend
+    cd smartcity-backend
     ```
 2.  Clean, install dependencies, and run the application:
     ```bash
@@ -86,7 +86,7 @@ The project is built upon a modern and reliable stack, ensuring performance, sec
 ### 🔹 Frontend Setup (React)
 1.  Navigate to the `frontend` directory:
     ```bash
-    cd frontend
+    cd smartcity-frontend
     ```
 2.  Install all required Node modules:
     ```bash
@@ -150,5 +150,5 @@ The system uses WebSockets (via STOMP) to provide instant communication for crit
 | `smartcity-backend/src/main/java/com/smartcity/...` | Core Java source code (Controllers, Services, Models, Repositories). |
 | `smartcity-frontend/` | Contains the React + Vite web application source code. |
 | `smartcity-frontend/src/pages/` | Top-level components and views (e.g., `AdminDashboard.jsx`, `ReportIssue.jsx`). |
-| `smartcity-frontend/src/components/` | Reusable UI components (e.g., `IssueCard.jsx`, `MapMarker.jsx`). |
-| `smartcity-frontend/src/utils/` | Utility functions, configuration, and API interaction helpers (e.g., `apiClient.js`). |
+| `smartcity-frontend/src/components/` | Reusable UI components (e.g., `IssueCard.jsx`, `MapView.jsx`). |
+| `smartcity-frontend/src/utils/` | Utility functions, configuration, and API interaction helpers (e.g., `auth.js`). |
