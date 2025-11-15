@@ -146,9 +146,9 @@ The system uses WebSockets (via STOMP) to provide instant communication for crit
 
 | Directory | Description |
 | :--- | :--- |
-| `backend/` | Contains the Java Spring Boot application. |
-| `backend/src/main/java/com/smartcity/...` | Core Java source code (Controllers, Services, Models, Repositories). |
-| `frontend/` | Contains the React + Vite web application source code. |
-| `frontend/src/pages/` | Top-level components and views (e.g., `AdminDashboard.jsx`, `ReportIssue.jsx`). |
-| `frontend/src/components/` | Reusable UI components (e.g., `IssueCard.jsx`, `MapMarker.jsx`). |
-| `frontend/src/utils/` | Utility functions, configuration, and API interaction helpers (e.g., `apiClient.js`). |
+| `smartcity-backend/` | Contains the Java Spring Boot application. |
+| `smartcity-backend/src/main/java/com/smartcity/...` | Core Java source code (Controllers, Services, Models, Repositories). |
+| `smartcity-frontend/` | Contains the React + Vite web application source code. |
+| `smartcity-frontend/src/pages/` | Top-level components and views (e.g., `AdminDashboard.jsx`, `ReportIssue.jsx`). |
+| `smartcity-frontend/src/components/` | Reusable UI components (e.g., `IssueCard.jsx`, `MapMarker.jsx`). |
+| `smartcity-frontend/src/utils/` | Utility functions, configuration, and API interaction helpers (e.g., `apiClient.js`). |
