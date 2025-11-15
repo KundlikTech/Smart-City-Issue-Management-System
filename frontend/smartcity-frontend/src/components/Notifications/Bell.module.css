@@ -1,0 +1,17 @@
+.bell {
+  position: relative;
+  font-size: 24px;
+  text-decoration: none;
+  color: #333;
+}
+
+.badge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}

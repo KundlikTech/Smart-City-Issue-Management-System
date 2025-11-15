@@ -1,0 +1,14 @@
+.container { padding: 20px; }
+.summary { margin-bottom: 20px; }
+.cards { display:flex; gap:12px; flex-wrap:wrap; }
+.card {
+  background:white; padding:14px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.05);
+  min-width:120px; text-align:center;
+}
+.analytics { margin-bottom:20px; }
+.chartsRow { display:flex; gap:16px; flex-wrap:wrap; }
+.chartBox { background:white; padding:12px; border-radius:8px; flex:1; min-width:280px; }
+.exportSection { margin-top:20px; padding:12px; background:#fff; border-radius:8px; }
+.exportControls { display:flex; gap:12px; align-items:center; }
+.exportControls label { display:flex; gap:8px; align-items:center; }
+.hint { margin-top:10px; color:#666; font-size:13px; }

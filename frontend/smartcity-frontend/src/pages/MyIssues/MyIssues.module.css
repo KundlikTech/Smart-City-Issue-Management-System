@@ -1,0 +1,16 @@
+.container {
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px #ccc;
+  margin-bottom: 15px;
+}
+
+.date {
+  font-size: 12px;
+  color: gray;
+}

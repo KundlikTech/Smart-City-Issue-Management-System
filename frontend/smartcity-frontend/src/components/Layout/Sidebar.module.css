@@ -1,0 +1,44 @@
+.sidebar {
+  width: 230px;
+  height: 100vh;
+  background: #1b263b;
+  color: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 20px;
+}
+
+.logo {
+  font-size: 22px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+}
+
+nav a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background: #415a77;
+}
+
+.logoutBtn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  background: #d00000;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}

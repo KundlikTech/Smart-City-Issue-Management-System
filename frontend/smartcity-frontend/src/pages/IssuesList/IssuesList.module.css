@@ -1,0 +1,54 @@
+.container {
+  padding: 30px;
+}
+
+.heading {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.badge {
+  padding: 5px 10px;
+  border-radius: 6px;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.pending {
+  background-color: orange;
+}
+
+.progress {
+  background-color: #1e90ff;
+}
+
+.resolved {
+  background-color: green;
+}
+
+.manageBtn {
+  padding: 8px 16px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.manageBtn:hover {
+  background-color: #357abd;
+}

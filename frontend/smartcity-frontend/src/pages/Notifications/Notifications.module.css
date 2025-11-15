@@ -1,0 +1,20 @@
+.container {
+  padding: 20px;
+}
+
+.card {
+  padding: 15px;
+  background: white;
+  margin-bottom: 10px;
+  border-left: 4px solid #0077ff;
+}
+
+.clearBtn {
+  margin-bottom: 15px;
+  background: red;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
