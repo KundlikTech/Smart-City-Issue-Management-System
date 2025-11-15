@@ -1,133 +1,154 @@
-🌆 Smart City Issue Management System
+# 🏙️ Smart City Issue Management System
 
-A full-stack Smart City Issue Management Platform built with Spring Boot, React + Vite, MySQL, and WebSockets.
-Citizens can report issues with GPS locations, while admins track, assign, and resolve them with real-time updates.
-
-🚀 Features
-👤 User Features
-
-Register & Login (JWT Authentication)
-
-Report issues with GPS location
-
-View issue history
-
-Live issue status updates
-
-Real-time notifications
-
-🛠 Admin Features
-
-Interactive dashboard with analytics
-
-Automatic department assignment
-
-Assign issues to departments
-
-Update issue status
-
-Manage active & completed assignments
-
-CSV report export
-
-Monthly & weekly trend charts
-
-🌍 Map Features
-
-Display issues on map
-
-Real-time map updates
-
-Distance-based issue search
-
-User geolocation support
-
-🧰 Tech Stack
-🔹 Backend
-
-Java Spring Boot
-
-Spring Security (JWT Auth)
-
-Spring WebSocket (STOMP)
-
-MySQL
-
-JPA / Hibernate
-
-Lombok
-
-🔹 Frontend
-
-React + Vite
-
-Axios
-
-React Router
-
-CSS Modules
-
-Chart.js
-
-Leaflet.js (Map Library)
-
-📦 Installation & Setup
-🔧 Backend Setup
-cd backend
-mvn clean install
-mvn spring-boot:run
-
-💻 Frontend Setup
-cd frontend
-npm install
-npm run dev
-
-⚙️ Database Setup (MySQL)
-
-Create the database:
-
-CREATE DATABASE smartcity_db;
+An end-to-end, full-stack platform designed to facilitate real-time issue reporting by citizens and provide a robust administrative dashboard for efficient tracking, assignment, and resolution.
 
 
-Update application.properties if needed:
 
-spring.datasource.username=root
-spring.datasource.password=root
-spring.jpa.hibernate.ddl-auto=update
+---
 
-🔑 API Authentication (JWT)
+## 🚀 Features
 
-Every API call must include:
+### 👤 User Features (Citizen Portal)
+* **Secure Access:** **Register & Login** using JWT Authentication.
+* **Issue Reporting:** **Report Issues with GPS Location** and detailed descriptions.
+* **Tracking:** **View Issue History** and follow its progress.
+* **Real-time Updates:** Get **Live Status Updates** and **Real-time Notifications** via WebSockets.
 
-Authorization: Bearer <token>
+### 🛠 Admin Features (Management Dashboard)
+* **Analytics:** Comprehensive **Dashboard with Analytics** (stats and charts).
+* **Workflow:** **Auto Department Assignment** based on issue type.
+* **Management:** Manually **Assign issues to departments** and **Update issue status**.
+* **Reporting:** **CSV Report Export** of all issues.
+* **Monitoring:** View **active and completed assignments**.
+* **Trend Analysis:** **Monthly / Weekly trend charts** for data-driven decisions.
 
-📊 Admin Dashboard APIs
-Endpoint	Description
-/api/admin/stats	Overall issue statistics
-/api/admin/trend/week	Last 7-day trends
-/api/admin/trend/month	Last 6-month trends
-/api/admin/recent-issues	Paginated recent issues
-/api/admin/export	Download CSV report
-🔔 Real-time Updates (WebSockets)
+### 🌍 Map Features
+* **Visualization:** **Show issues on map** using location markers.
+* **Dynamic View:** **Real-time map events** for newly reported issues.
+* **Location Services:** Integrated **Geolocation support** and **Distance-based issue search**.
 
-Endpoint
+---
 
-ws://localhost:8080/ws
+## 🧰 Tech Stack
 
+The project is built upon a modern and reliable stack, ensuring performance, security, and scalability.
 
-Subscribed Channels
+### Backend (Spring Boot)
+| Component | Purpose |
+| :--- | :--- |
+| **Java Spring Boot** | Core application framework. |
+| **Spring Security (JWT Auth)** | Secure REST endpoints and user authentication. |
+| **Spring WebSocket (STOMP)** | Real-time communication for live updates. |
+| **MySQL** | Persistent data storage. |
+| **JPA/Hibernate** | Object-Relational Mapping (ORM). |
+| **Lombok** | Boilerplate code reduction. |
 
-/topic/status — issue status updates
+### Frontend (React)
+| Component | Purpose |
+| :--- | :--- |
+| **React + Vite** | Fast and modern user interface development. |
+| **Axios** | HTTP client for API interaction. |
+| **React Router** | Client-side routing. |
+| **CSS Modules** | Scoped and modular styling. |
+| **Chart.js** | Rendering beautiful trend and statistics charts. |
+| **Leaflet.js (Map)** | Interactive mapping for displaying issue locations. |
 
-/topic/map — live map events
+---
 
-/user/queue/assignments — direct admin notifications
+## 📦 Installation Guide
 
-🧑‍💻 Project Structure
-backend/
- └─ src/main/java/com/smartcity/...
+### ⚙ Database Setup (MySQL)
 
-frontend/
- └─ src/pages/
- └─ src/components/
- └─ src/utils/
+1.  Ensure your MySQL server is running.
+2.  Connect to your server and **create the database**:
+    ```sql
+    CREATE DATABASE smartcity_db;
+    ```
+3.  Verify or update the connection details in the `backend/src/main/resources/application.properties`:
+    ```properties
+    spring.datasource.username=root
+    spring.datasource.password=root
+    spring.jpa.hibernate.ddl-auto=update
+    ```
+
+### 🔹 Backend Setup (Spring Boot)
+1.  Navigate to the `backend` directory:
+    ```bash
+    cd backend
+    ```
+2.  Clean, install dependencies, and run the application:
+    ```bash
+    mvn clean install
+    mvn spring-boot:run
+    ```
+    The backend will start, typically running on `http://localhost:8080`.
+
+### 🔹 Frontend Setup (React)
+1.  Navigate to the `frontend` directory:
+    ```bash
+    cd frontend
+    ```
+2.  Install all required Node modules:
+    ```bash
+    npm install
+    ```
+3.  Start the development server:
+    ```bash
+    npm run dev
+    ```
+    The frontend will start, typically running on `http://localhost:5173`.
+
+---
+
+## 🔑 API Authentication (JWT)
+
+This project strictly enforces JWT (JSON Web Token) authentication for protected routes.
+
+Every API request to a protected endpoint **must** include the token in the `Authorization` header:
+
+| Header Key | Value Format |
+| :--- | :--- |
+| `Authorization` | `Bearer <token>` |
+
+---
+
+## 📊 Admin Dashboard APIs
+
+The following REST endpoints are available for administrative operations:
+
+| Endpoint | Description | Authentication |
+| :--- | :--- | :--- |
+| `/api/admin/stats` | Retrieve aggregate issue statistics for the dashboard. | Required |
+| `/api/admin/trend/week` | Get issue submission trend data for the **last 7 days**. | Required |
+| `/api/admin/trend/month` | Get issue submission trend data for the **last 6 months**. | Required |
+| `/api/admin/recent-issues` | Fetch a **paginated list** of recent issues for the management table. | Required |
+| `/api/admin/export` | Trigger a **CSV download** of all recorded issues. | Required |
+
+---
+
+## 🔔 Real-time Features (WebSockets)
+
+The system uses WebSockets (via STOMP) to provide instant communication for critical updates.
+
+**WebSocket endpoint:** `ws://localhost:8080/ws`
+
+### Subscribed Channels
+
+| Channel | Description | Communication Type |
+| :--- | :--- | :--- |
+| `/topic/status` | Broadcasts real-time **issue status updates** globally. | Public (Topic) |
+| `/topic/map` | Broadcasts **map events** (e.g., new issue reported) for map visualization. | Public (Topic) |
+| `/user/queue/assignments` | Sends **direct notifications** (e.g., assignment alerts) to the logged-in user. | Private (User Queue) |
+
+---
+
+## 🧑‍💻 Project Structure
+
+| Directory | Description |
+| :--- | :--- |
+| `backend/` | Contains the Java Spring Boot application. |
+| `backend/src/main/java/com/smartcity/...` | Core Java source code (Controllers, Services, Models, Repositories). |
+| `frontend/` | Contains the React + Vite web application source code. |
+| `frontend/src/pages/` | Top-level components and views (e.g., `AdminDashboard.jsx`, `ReportIssue.jsx`). |
+| `frontend/src/components/` | Reusable UI components (e.g., `IssueCard.jsx`, `MapMarker.jsx`). |
+| `frontend/src/utils/` | Utility functions, configuration, and API interaction helpers (e.g., `apiClient.js`). |
